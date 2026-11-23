@@ -1,0 +1,11 @@
+# Raw Kaggle data is 229 MB (over GitHub's 100 MB limit) - download it from Kaggle instead
+properties.csv
+
+# Local backups and caches
+*_backup_*.ipynb
+.ipynb_checkpoints/
+__pycache__/
+catboost_info/
+.venv/
+venv/
+.env

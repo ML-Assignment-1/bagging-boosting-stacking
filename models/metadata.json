@@ -1,0 +1,349 @@
+{
+  "target": "Asking price in LKR millions",
+  "features": [
+    "district",
+    "location",
+    "bedrooms",
+    "bathrooms",
+    "house_sqft",
+    "land_perches"
+  ],
+  "blend_weight_rf": 0.35000000000000003,
+  "stack_weights": {
+    "Random Forest": 0.1255,
+    "XGBoost": 0.1412,
+    "CatBoost": 0.7751
+  },
+  "metrics": [
+    {
+      "Model": "Hybrid RF + CatBoost",
+      "Family": "Hybrid",
+      "Train R2": 0.8282,
+      "Test R2": 0.7496,
+      "Gap": 0.0786,
+      "Train MAE": 8.3186,
+      "Test MAE": 10.3759,
+      "Test RMSE": 22.8265,
+      "Train time (s)": 4.9531
+    },
+    {
+      "Model": "Stacking",
+      "Family": "Stacking",
+      "Train R2": 0.8284,
+      "Test R2": 0.7494,
+      "Gap": 0.079,
+      "Train MAE": 8.425,
+      "Test MAE": 10.4182,
+      "Test RMSE": 22.8363,
+      "Train time (s)": 28.2744
+    },
+    {
+      "Model": "CatBoost",
+      "Family": "Boosting",
+      "Train R2": 0.8247,
+      "Test R2": 0.7459,
+      "Gap": 0.0787,
+      "Train MAE": 8.5683,
+      "Test MAE": 10.5205,
+      "Test RMSE": 22.9925,
+      "Train time (s)": 2.6273
+    },
+    {
+      "Model": "XGBoost",
+      "Family": "Boosting",
+      "Train R2": 0.8127,
+      "Test R2": 0.7424,
+      "Gap": 0.0704,
+      "Train MAE": 8.6241,
+      "Test MAE": 10.5546,
+      "Test RMSE": 23.1523,
+      "Train time (s)": 0.641
+    },
+    {
+      "Model": "Random Forest",
+      "Family": "Bagging",
+      "Train R2": 0.8128,
+      "Test R2": 0.7302,
+      "Gap": 0.0826,
+      "Train MAE": 8.4739,
+      "Test MAE": 10.7955,
+      "Test RMSE": 23.6924,
+      "Train time (s)": 2.3258
+    },
+    {
+      "Model": "Median Baseline",
+      "Family": "Baseline",
+      "Train R2": -0.0626,
+      "Test R2": -0.0767,
+      "Gap": 0.0141,
+      "Train MAE": 22.0323,
+      "Test MAE": 24.4319,
+      "Test RMSE": 47.3318,
+      "Train time (s)": 0.0
+    }
+  ],
+  "district_towns": {
+    "Ampara": [
+      "Akkarepattu",
+      "Ampara City",
+      "Kalmunai",
+      "Sainthamaruthu"
+    ],
+    "Anuradhapura": [
+      "Anuradhapura City",
+      "Eppawala",
+      "Galenbindunuwewa",
+      "Galnewa",
+      "Kekirawa",
+      "Medawachchiya",
+      "Mihintale",
+      "Nochchiyagama",
+      "Talawa",
+      "Tambuttegama"
+    ],
+    "Badulla": [
+      "Badulla City",
+      "Bandarawela",
+      "Diyatalawa",
+      "Ella",
+      "Hali Ela",
+      "Haputale",
+      "Mahiyanganaya",
+      "Welimada"
+    ],
+    "Batticaloa": [
+      "Batticaloa City"
+    ],
+    "Colombo": [
+      "Angoda",
+      "Athurugiriya",
+      "Avissawella",
+      "Battaramulla",
+      "Boralesgamuwa",
+      "Colombo 1",
+      "Colombo 10",
+      "Colombo 11",
+      "Colombo 12",
+      "Colombo 13",
+      "Colombo 14",
+      "Colombo 15",
+      "Colombo 2",
+      "Colombo 3",
+      "Colombo 4",
+      "Colombo 5",
+      "Colombo 6",
+      "Colombo 7",
+      "Colombo 8",
+      "Colombo 9",
+      "Dehiwala",
+      "Godagama",
+      "Hanwella",
+      "Homagama",
+      "Kaduwela",
+      "Kesbewa",
+      "Kohuwala",
+      "Kolonnawa",
+      "Kottawa",
+      "Kotte",
+      "Maharagama",
+      "Malabe",
+      "Meegoda",
+      "Moratuwa",
+      "Mount Lavinia",
+      "Nawala",
+      "Nugegoda",
+      "Padukka",
+      "Pannipitiya",
+      "Piliyandala",
+      "Rajagiriya",
+      "Ratmalana",
+      "Talawatugoda",
+      "Wellampitiya"
+    ],
+    "Galle": [
+      "Ahangama",
+      "Ambalangoda",
+      "Baddegama",
+      "Batapola",
+      "Bentota",
+      "Elpitiya",
+      "Galle City",
+      "Hikkaduwa",
+      "Karapitiya"
+    ],
+    "Gampaha": [
+      "Delgoda",
+      "Divulapitiya",
+      "Gampaha City",
+      "Ganemulla",
+      "Ja-Ela",
+      "Kadawatha",
+      "Kandana",
+      "Katunayake",
+      "Kelaniya",
+      "Kiribathgoda",
+      "Minuwangoda",
+      "Mirigama",
+      "Negombo",
+      "Nittambuwa",
+      "Ragama",
+      "Seeduwa",
+      "Veyangoda",
+      "Wattala"
+    ],
+    "Hambantota": [
+      "Ambalantota",
+      "Beliatta",
+      "Hambantota City",
+      "Tangalla",
+      "Tissamaharama"
+    ],
+    "Jaffna": [
+      "Chavakachcheri",
+      "Jaffna City",
+      "Nallur"
+    ],
+    "Kalutara": [
+      "Alutgama",
+      "Bandaragama",
+      "Beruwala",
+      "Horana",
+      "Ingiriya",
+      "Kalutara City",
+      "Matugama",
+      "Panadura",
+      "Wadduwa"
+    ],
+    "Kandy": [
+      "Akurana",
+      "Ampitiya",
+      "Digana",
+      "Galagedara",
+      "Gampola",
+      "Gelioya",
+      "Kadugannawa",
+      "Kandy City",
+      "Katugastota",
+      "Kundasale",
+      "Madawala Bazaar",
+      "Menikhinna",
+      "Nawalapitiya",
+      "Peradeniya",
+      "Pilimatalawa",
+      "Wattegama"
+    ],
+    "Kegalle": [
+      "Dehiowita",
+      "Deraniyagala",
+      "Galigamuwa",
+      "Kegalle City",
+      "Kitulgala",
+      "Mawanella",
+      "Rambukkana",
+      "Ruwanwella",
+      "Warakapola",
+      "Yatiyantota"
+    ],
+    "Kilinochchi": [
+      "Kilinochchi City"
+    ],
+    "Kurunegala": [
+      "Alawwa",
+      "Bingiriya",
+      "Galgamuwa",
+      "Giriulla",
+      "Hettipola",
+      "Ibbagamuwa",
+      "Kuliyapitiya",
+      "Kurunegala City",
+      "Mawathagama",
+      "Narammala",
+      "Nikaweratiya",
+      "Pannala",
+      "Polgahawela",
+      "Wariyapola"
+    ],
+    "Mannar": [
+      "Mannar City"
+    ],
+    "Matale": [
+      "Dambulla",
+      "Galewela",
+      "Matale City",
+      "Palapathwela",
+      "Pallepola",
+      "Rattota",
+      "Sigiriya",
+      "Ukuwela",
+      "Yatawatta"
+    ],
+    "Matara": [
+      "Akuressa",
+      "Deniyaya",
+      "Dikwella",
+      "Gandara",
+      "Hakmana",
+      "Kamburugamuwa",
+      "Kamburupitiya",
+      "Kekanadurra",
+      "Matara City",
+      "Weligama"
+    ],
+    "Monaragala": [
+      "Bibile",
+      "Buttala",
+      "Kataragama",
+      "Monaragala City",
+      "Wellawaya"
+    ],
+    "Mullativu": [
+      "Mullativu City"
+    ],
+    "Nuwara Eliya": [
+      "Ginigathhena",
+      "Hatton",
+      "Madulla",
+      "Nuwara Eliya City"
+    ],
+    "Polonnaruwa": [
+      "Hingurakgoda",
+      "Kaduruwela",
+      "Medirigiriya",
+      "Polonnaruwa City"
+    ],
+    "Puttalam": [
+      "Anamaduwa",
+      "Chilaw",
+      "Dankotuwa",
+      "Marawila",
+      "Nattandiya",
+      "Puttalam City",
+      "Wennappuwa"
+    ],
+    "Ratnapura": [
+      "Balangoda",
+      "Eheliyagoda",
+      "Embilipitiya",
+      "Kuruwita",
+      "Pelmadulla",
+      "Ratnapura City"
+    ],
+    "Trincomalee": [
+      "Kinniya",
+      "Trincomalee City"
+    ],
+    "Vavuniya": [
+      "Vavuniya City"
+    ]
+  },
+  "train_period": [
+    "2022-09-08",
+    "2023-02-24"
+  ],
+  "test_period": [
+    "2023-02-24",
+    "2023-04-01"
+  ],
+  "n_train": 29313,
+  "n_test": 7329
+}
